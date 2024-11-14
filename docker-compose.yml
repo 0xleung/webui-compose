@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: openwebui
+    ports:
+      - "8999:8080"
+    volumes:
+      - ./data:/app/backend/data
+      - /app/backend/data/cache
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OPENAI_API_KEY=
+      - OPENAI_API_BASE_URL=
+      - ENABLE_OPENAI_API=True
+    restart: always  # 确保容器崩溃时重新启动
