@@ -8,6 +8,6 @@ services:
       - "8999:8080"
     volumes:
       - ./data:/app/backend/data
-      - /app/backend/data/cache
+      - /app/backend/data/cache # reuse image cache
     env_file: ./.env
     restart: always  # 确保容器崩溃时重新启动
