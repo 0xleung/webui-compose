@@ -1,4 +1,4 @@
-This is a Docker compose template for running Open-UI locally. When using it, copy `.env.example` to `.env`. Modify the corresponding configuration files as needed.
+This is a Docker compose template for running open-webui locally. When using it, copy `.env.example` to `.env`. Modify the corresponding configuration files as needed.
 
 **OLLAMA_BASE_URL**: The address of Ollama.
 
